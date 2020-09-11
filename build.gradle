@@ -19,4 +19,6 @@ repositories {
 }
 
 dependencies {
+
+    compile "org.projectlombok:lombok:1.18.6"
 }
