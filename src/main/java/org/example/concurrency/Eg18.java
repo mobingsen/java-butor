@@ -6,7 +6,7 @@ import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by mbs on 2020/7/10 10:36
+ * Created by xiaomo on 2020/7/10 10:36
  */
 public class Eg18 {
 

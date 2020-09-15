@@ -16,7 +16,7 @@ package org.example.concurrency;
  *   子线程run方法中的执行结果。
  * 6.线程的中断规则：可以调用interrupt方法来中断线程，这个调用happen-before对该线程中断的检查（isInterrupted）。
  *
- * Created by mbs on 2020/7/9 14:53
+ * Created by xiaomo on 2020/7/9 14:53
  */
 public class Eg13 {
 }

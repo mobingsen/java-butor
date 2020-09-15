@@ -9,7 +9,7 @@ package org.example.jvm;
  * 作为 invokedynamic 的准备工作，Java 7 引入了更加底层、更加灵活的方法抽象 ：方法句柄（MethodHandle）。
  *
  *
- * Created by mbs on 2020/7/21 17:21
+ * Created by xiaomo on 2020/7/21 17:21
  */
 public class _7_InvokeDynamic {
 }

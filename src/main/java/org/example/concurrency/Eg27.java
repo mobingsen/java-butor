@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
  * 1.随机数生成器的种子
  * 2.具体的随机数生成算法（函数）
  * 对于ThreadLocalRandom来说，其随机数生成器的种子是存放在每个线程的ThreadLocal中的
- * Created by mbs on 2020/7/15 20:12
+ * Created by xiaomo on 2020/7/15 20:12
  */
 public class Eg27 {
 

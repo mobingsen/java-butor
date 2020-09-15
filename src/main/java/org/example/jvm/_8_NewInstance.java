@@ -45,7 +45,7 @@ package org.example.jvm;
  * curl -L -O http://central.maven.org/maven2/org/openjdk/jol/jol-cli/0.9/jol-cli-0.9-full.jar
  * java -cp jol-cli-0.9-full.jar org.openjdk.jol.Main internals java.lang.String
  *
- * Created by mbs on 2020/7/29 17:35
+ * Created by xiaomo on 2020/7/29 17:35
  */
 public class _8_NewInstance {
 }

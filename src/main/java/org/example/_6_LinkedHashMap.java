@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * LinkedHashMap实际上是对HashMap进行了扩展，最大的区别在于LinkedHashMap对HashMap的newNode方法进行了重写，而newNode中记录了他的前
  * node节点和后node节点，这样就形成了链表结构。
- * Created by mbs on 2020/9/10 10:03
+ * Created by xiaomo on 2020/9/10 10:03
  */
 public class _6_LinkedHashMap {
 

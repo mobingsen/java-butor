@@ -31,7 +31,7 @@ import java.util.stream.IntStream;
  * 5.在获取aqs锁时，这些进入到阻塞队列中的线程会按照在队列中的排序先后尝试获取
  * 6.当aqs阻塞队列中的线程获取到锁后，就表示该线程已经可以正常执行了
  * 7.陷入到阻塞状态的线程，依然需要进入到操作系统的内核态，进入阻塞（park方法实现）
- * Created by mbs on 2020/7/10 19:35
+ * Created by xiaomo on 2020/7/10 19:35
  */
 public class Eg22 {
 

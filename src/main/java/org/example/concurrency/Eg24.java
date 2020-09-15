@@ -36,7 +36,7 @@ import java.util.stream.IntStream;
  * SHUTDOWN -> TIDYING：在线程池与阻塞队列中均变为空时，
  * STOP -> TIDYING：在线程池变为空时。
  * TIDYING -> TERMINATED：在terminated方法被执行完毕时。
- * Created by mbs on 2020/7/14 15:00
+ * Created by xiaomo on 2020/7/14 15:00
  */
 public class Eg24 {
 

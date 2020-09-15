@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 /**
- * Created by mbs on 2020/7/15 17:10
+ * Created by xiaomo on 2020/7/15 17:10
  */
 public class Eg26 {
 

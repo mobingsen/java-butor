@@ -32,7 +32,7 @@ package org.example;
  * 	TCP/IP
  * 7. 常见设计模式
  * 	装饰者，模板方法，策略，工厂，状态
- * Created by mbs on 2020/9/10 10:16
+ * Created by xiaomo on 2020/9/10 10:16
  */
 public class _0_note {
 }

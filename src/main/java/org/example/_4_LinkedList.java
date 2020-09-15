@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by mbs on 2020/9/9 20:29
+ * Created by xiaomo on 2020/9/9 20:29
  */
 public class _4_LinkedList {
 

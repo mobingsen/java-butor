@@ -1,7 +1,7 @@
 package org.example.algorithms;
 
 /**
- * Created by mbs on 2020/7/2 15:33
+ * Created by xiaomo on 2020/7/2 15:33
  */
 public class Print {
 

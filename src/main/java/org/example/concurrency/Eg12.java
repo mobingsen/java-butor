@@ -28,7 +28,7 @@ package org.example.concurrency;
  * 内存屏障（Release Barrier，释放屏障）
  * monitorexit
  *
- * Created by mbs on 2020/7/8 16:26
+ * Created by xiaomo on 2020/7/8 16:26
  */
 public class Eg12 {
 }

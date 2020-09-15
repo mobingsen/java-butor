@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 公平锁：即是线程在获取锁时线程排队等待，并不会出现插队情况；
  * 非公平锁：即是线程在获取锁时先插队尝试获取锁，如果失败则加入等待队列
  * ReentrantLock的实现是通过volatile int state、LockSupport.parkNanos和compareAndSetWaitStatus共同构建sync。
- * Created by mbs on 2020/9/11 13:53
+ * Created by xiaomo on 2020/9/11 13:53
  */
 public class _10_ReentrantLock {
 

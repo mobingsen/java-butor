@@ -12,7 +12,7 @@ package org.example.concurrency;
  *      jstack PID
  *   3.jmc
  *
- * Created by mbs on 2020/7/7 9:51
+ * Created by xiaomo on 2020/7/7 9:51
  */
 public class Eg9 {
 

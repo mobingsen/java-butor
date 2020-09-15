@@ -12,7 +12,7 @@ import java.util.Map;
  * 再次扩容时，容量变为16的两倍32，阈值也12的两倍24，table也变为原来的两倍，再逐次把元素移到新的数组中。
  *
  *
- * Created by mbs on 2020/9/9 20:35
+ * Created by xiaomo on 2020/9/9 20:35
  */
 public class _5_HashMap {
 
