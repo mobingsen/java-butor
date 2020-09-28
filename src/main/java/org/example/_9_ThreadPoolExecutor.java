@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -10,8 +11,14 @@ import java.util.concurrent.TimeUnit;
 public class _9_ThreadPoolExecutor {
 
     public static void main(String[] args) throws InterruptedException {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 2, 30L,
-                TimeUnit.SECONDS, new ArrayBlockingQueue<>(10));
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(
+                1,
+                2,
+                30L,
+                TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(10),
+                Executors.defaultThreadFactory(),
+                new ThreadPoolExecutor.AbortPolicy());
         for (int i = 0; i < 20; i++) {
             final int id = i;
             executor.submit(() -> System.out.println(id));

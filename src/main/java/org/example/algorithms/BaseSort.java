@@ -39,9 +39,9 @@ public class BaseSort {
             times++;
         }
         // 建立十个队列
-        List<ArrayList> queue = new ArrayList<>();
+        List<ArrayList<Integer>> queue = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            ArrayList queue1 = new ArrayList();
+            ArrayList<Integer> queue1 = new ArrayList<>();
             queue.add(queue1);
         }
         // 进行times次分配和收集
@@ -49,7 +49,7 @@ public class BaseSort {
             // 分配
             for (int value : array) {
                 int x = value % (int) Math.pow(10, i + 1) / (int) Math.pow(10, i);
-                ArrayList queue2 = queue.get(x);
+                ArrayList<Integer> queue2 = queue.get(x);
                 queue2.add(value);
                 queue.set(x, queue2);
             }

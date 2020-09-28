@@ -13,10 +13,11 @@ import java.util.Map;
  * 4. 分析程序的源代码，找出嫌疑对象数量过多的原因。
  *
  * ps -ef|grep java 能查看进程的pid等具体信息
- * jmap -histo:live pid | head -7 或者生成离线文件jmap -dump:live,format=b,file=heap.hprof pid
+ * jmap -histo:live pid | head -7 或者生成离线文件jmap -dump:live,format=b,file=/opt/jvm/dump.hprof pid
  * Memory Analyzer插件下载：http://www.eclipse.org/mat/downloads.php
  *
  * -XX:+HeapDumpOnOutOfMemoryError
+ * -XX:HeapDumpPath=/opt/jvmdump
  * Created by xiaomo on 2020/9/28 9:40
  */
 public class _11_OutOfMemory {
