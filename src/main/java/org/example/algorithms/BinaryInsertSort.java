@@ -4,7 +4,7 @@ package org.example.algorithms;
  * 2.二分法插入排序
  * 基本思想：二分法插入排序的思想和直接插入一样，只是找合适的插入位置的方式不同，这里是按二分法找到合适的位置，可以减少比较的次数。
  *
- * Created by xiaomo on 2020/7/2 14:39
+ * Created by 小墨 on 2020/7/2 14:39
  */
 public class BinaryInsertSort {
 

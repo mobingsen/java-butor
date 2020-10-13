@@ -18,7 +18,7 @@ package org.example.jvm;
  * 如果我们希望对特定的pid进行监控那么可以使用 pidstat -w pid命令，cswch和nvcswch表示自愿及非自愿切换。
  *
  * 参考地址：https://mp.weixin.qq.com/s/L5MqY-eC5OyUdg2PsU6BVw
- * Created by xiaomo on 2020/9/28 10:00
+ * Created by 小墨 on 2020/9/28 10:00
  */
 public class _12_CPUOccupyHigh {
 }

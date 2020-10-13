@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 /**
  * CountDownLatch
  *
- * Created by xiaomo on 2020/7/9 15:30
+ * Created by 小墨 on 2020/7/9 15:30
  */
 public class Eg14 {
 

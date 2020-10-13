@@ -6,7 +6,7 @@ package org.example.concurrency;
  * 2.创建两个线程，其中一个线程对该对象的成员变量counter增1，另一个线程对该对象的成员变量减1.
  * 3.输出该对象成员变量counter每次变化后的值。
  * 4.最终输出的结果应为：10101010101...
- * Created by xiaomo on 2020/6/27 14:20
+ * Created by 小墨 on 2020/6/27 14:20
  */
 public class Eg2 {
 

@@ -24,7 +24,7 @@ package org.example.jvm;
  * 器将自动添加对应的 close() 操作。在声明多个 AutoCloseable 实例的情况下，编译生成的字节码类似于上面手工编写代码的编译结果。与手工代码
  * 相比，try-with-resources 还会使用 Supressed 异常的功能，来避免原异常“被消失”。
  *
- * Created by xiaomo on 2020/7/21 10:54
+ * Created by 小墨 on 2020/7/21 10:54
  */
 public class _4_ExceptionHandle {
 }

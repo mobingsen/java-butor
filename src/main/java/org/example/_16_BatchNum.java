@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Created by xiaomo on 2020/10/10 11:09
+ * Created by 小墨 on 2020/10/10 11:09
  */
 public class _16_BatchNum {
 

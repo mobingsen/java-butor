@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 2.只能保证一个变量的原子操作：可以通过AtomicReference来实现对多个变量的原子操作
  * 3.ABA问题：
  *
- * Created by xiaomo on 2020/7/9 20:44
+ * Created by 小墨 on 2020/7/9 20:44
  */
 public class Eg17 {
 

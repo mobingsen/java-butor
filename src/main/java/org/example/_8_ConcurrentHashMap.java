@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *              1、如果前后两次计算结果相同，则说明计算出来的元素个数是准确的；
  *              2、如果前后两次计算结果都不同，则给每个Segment进行加锁，再计算一次元素的个数；
  *  >>jdk8: 采用Node + CAS + Synchronized + 红黑树来保证并发安全进行实现
- * Created by xiaomo on 2020/9/10 10:34
+ * Created by 小墨 on 2020/9/10 10:34
  */
 public class _8_ConcurrentHashMap {
 

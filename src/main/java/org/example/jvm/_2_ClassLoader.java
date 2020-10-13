@@ -50,7 +50,7 @@ package org.example.jvm;
  *
  * JVM 参数 -verbose:class 来打印类加载的先后顺序
  * -XX：+TraceClassLoading 可以看到类加载过程
- * Created by xiaomo on 2020/7/20 17:07
+ * Created by 小墨 on 2020/7/20 17:07
  */
 public class _2_ClassLoader {
 }

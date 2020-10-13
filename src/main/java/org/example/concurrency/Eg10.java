@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 2.具体实现方式：前者是通过java代码的方式来实现，后者是通过jvm底层来实现（无需开发者关注）
  * 3.锁的释放方式：前者务必通过unlock()方法再finally块中收工释放，后者是通过jvm来释放（无需开发者关注）
  * 4.锁的具体类型：前者提供了多种，如公平锁、非公平锁，后者与前者均提供了可重入锁
- * Created by xiaomo on 2020/7/7 10:47
+ * Created by 小墨 on 2020/7/7 10:47
  */
 public class Eg10 {
 

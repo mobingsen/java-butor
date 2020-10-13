@@ -33,7 +33,7 @@ package org.example.concurrency;
  *
  * D:\workspace-mbs\java-example\build\classes\java\main>
  *
- * Created by xiaomo on 2020/6/27 11:55
+ * Created by 小墨 on 2020/6/27 11:55
  *
  * 关于wait与notify和notifyAll方法的总结：
  * 1.当调用wait时，首先需要确保调用了wait方法的线程已经持有了对象的锁。

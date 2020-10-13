@@ -1,7 +1,7 @@
 package org.example.lambda;
 
 /**
- * Created by xiaomo on 2020/9/29 9:46
+ * Created by 小墨 on 2020/9/29 9:46
  */
 public class _1_HotUpdate {
 
