@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'idea'
-    id "maven"
+    id 'maven'
 }
 
 tasks.withType(JavaCompile) {
@@ -20,5 +20,6 @@ repositories {
 
 dependencies {
 
-    compile "org.projectlombok:lombok:1.18.6"
+    compile 'org.projectlombok:lombok:1.18.6'
+    compile 'org.openjdk.jol:jol-cli:0.14'
 }
