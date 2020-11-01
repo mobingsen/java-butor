@@ -1,0 +1,91 @@
+package org.example.reactor;
+
+import org.reactivestreams.Publisher;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.FluxSink;
+import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
+import reactor.util.function.Tuple2;
+
+import java.time.Duration;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+/**
+ * github：https://github.com/reactor/reactor-core
+ *
+ * flux：一个包含0~N个元素的响应式序列，Flux上的静态工厂允许从任意回调类型生成源。
+ * Mono：Mono上的静态工厂允许从任意回调类型生成确定性的零或一序列。
+ *
+ * Created by 小墨 on 2020/11/1 12:04
+ */
+public class _1_Flux {
+
+    public static void main(String[] args) {
+        List<Long> someInts = IntStream.rangeClosed(1, 20).boxed().map(Long::new).collect(Collectors.toList());
+        Flux.fromIterable(someInts)
+                .mergeWith(Flux.interval(Duration.ofSeconds(5)))
+                .doOnNext(_1_Flux::someObserver)
+                .map(d -> d * 2)
+                .take(3)
+                .onErrorResume(_1_Flux::fallback)
+                .doAfterTerminate(_1_Flux::incrementTerminate)
+                .subscribe(System.out::println);
+        Mono.fromCallable(System::currentTimeMillis)
+                .flatMap(time -> Mono.firstWithValue(_1_Flux.findRecent(time), _1_Flux.findRecent(time)))
+                .timeout(Duration.ofSeconds(3), Mono.just(2L))
+                .doOnSuccess(_1_Flux::incrementSuccess)
+                .subscribe(System.out::println);
+        Tuple2<Long, Long> block = Mono.zip(
+                Mono.just(System.currentTimeMillis()),
+                Mono.just(2).delay(Duration.ofSeconds(1)).map(i -> i * System.currentTimeMillis())
+        ).block();
+        Mono.fromCallable(System::currentTimeMillis)
+                .repeat()
+                .publishOn(Schedulers.single())
+                .log("foo.bar")
+                .flatMap(time ->
+                                Mono.fromCallable(() -> {
+                                    Thread.sleep(1000);
+                                    return time;
+                                })
+                                        .subscribeOn(Schedulers.parallel())
+                        , 8) //maxConcurrency 8
+                .subscribe();
+        Mono.fromCallable(System::currentTimeMillis)
+                .repeat()
+                .parallel(8) //parallelism
+                .runOn(Schedulers.parallel())
+                .doOnNext(d -> System.out.println("I'm on thread " + Thread.currentThread()))
+                .subscribe();
+        Scanner scanner = new Scanner(System.in);
+        Flux.create(sink -> sink.next(scanner.nextInt()),
+                // Overflow (backpressure) handling, default is BUFFER
+                FluxSink.OverflowStrategy.LATEST)
+                .timeout(Duration.ofSeconds(3))
+                .doOnComplete(() -> System.out.println("completed!")
+                ).subscribe(System.out::println);
+    }
+
+    private static void incrementSuccess(Long r) {
+        System.out.println(r);
+    }
+
+    private static Mono<Long> findRecent(Long time) {
+        return Mono.justOrEmpty(time);
+    }
+
+    private static void incrementTerminate() {
+        System.out.println("incrementTerminate");
+    }
+
+    private static Publisher<Long> fallback(Throwable throwable) {
+        return Flux.just(0L);
+    }
+
+    private static void someObserver(Long e) {
+        System.out.println("someObserver: " + e);
+    }
+}
