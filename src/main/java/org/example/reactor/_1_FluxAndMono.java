@@ -9,6 +9,7 @@ import reactor.util.function.Tuple2;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
@@ -21,25 +22,26 @@ import java.util.stream.IntStream;
  * Mono：Mono上的静态工厂允许从任意回调类型生成确定性的零或一序列。
  *
  * reactor实现还有jdk的Rxjava，web的webflux，netty
- *
+ * Rxjava
  * Created by 小墨 on 2020/11/1 12:04
  */
-public class _1_Flux {
+public class _1_FluxAndMono {
 
     public static void main(String[] args) {
         List<Long> someInts = IntStream.rangeClosed(1, 5).boxed().map(Long::new).collect(Collectors.toList());
+        someInts.stream().peek(System.out::println).collect(Collectors.toList());
         Flux.fromIterable(someInts)
                 .mergeWith(Flux.interval(Duration.ofNanos(1)))
-                .doOnNext(_1_Flux::someObserver)
+                .doOnNext(_1_FluxAndMono::someObserver)
                 .map(d -> d * 2)
                 .take(3)
-                .onErrorResume(_1_Flux::fallback)
-                .doAfterTerminate(_1_Flux::incrementTerminate)
+                .onErrorResume(_1_FluxAndMono::fallback)
+                .doAfterTerminate(_1_FluxAndMono::incrementTerminate)
                 .subscribe(System.out::println);
         Mono.fromCallable(System::currentTimeMillis)
-                .flatMap(time -> Mono.firstWithValue(_1_Flux.findRecent(time), _1_Flux.findRecent(time)))
+                .flatMap(time -> Mono.firstWithValue(_1_FluxAndMono.findRecent(time), _1_FluxAndMono.findRecent(time)))
                 .timeout(Duration.ofSeconds(3), Mono.just(2L))
-                .doOnSuccess(_1_Flux::incrementSuccess)
+                .doOnSuccess(_1_FluxAndMono::incrementSuccess)
                 .subscribe(System.out::println);
         Tuple2<Long, Long> block = Mono.zip(
                 Mono.just(System.currentTimeMillis()),
