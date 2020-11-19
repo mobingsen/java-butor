@@ -15,10 +15,40 @@ import java.util.concurrent.ConcurrentHashMap;
 public class _8_ConcurrentHashMap {
 
     public static void main(String[] args) {
-        Map<Integer, Integer> map = new ConcurrentHashMap<>();
-        for (int i = 0; i < 20; i++) {
-            map.put(i, i);
+        Map<Node, Integer> map = new ConcurrentHashMap<>(16);
+        for (int i = 0; i < 10; i++) {
+            // 数组+链表|红黑树    当元素插入数组时是用cas操作的，操作链表时是synchronized代码块的，
+            map.put(new Node(1), i);
         }
         System.out.println(map.toString());
+    }
+
+    static class Node {
+        private int i;
+
+        public Node(int i) {
+            this.i = i;
+        }
+
+        public int getI() {
+            return i;
+        }
+
+        public void setI(int i) {
+            this.i = i;
+        }
+
+        @Override
+        public int hashCode() {
+            return i % 9;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (null == obj) return false;
+            if (!(obj instanceof Node)) return false;
+            Node node = (Node) obj;
+            return node.getI() == this.getI();
+        }
     }
 }
