@@ -1,19 +1,9 @@
 package org.example.hj;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -105,8 +95,6 @@ public class _2_LianTongArea {
         }
     }
 
-    @Getter
-    @Setter
     static class Node {
         private int x;
         private int y;
@@ -139,6 +127,30 @@ public class _2_LianTongArea {
             if (!(obj instanceof Node)) return false;
             Node node = (Node) obj;
             return node.getX() == this.x && node.getY() == this.y;
+        }
+
+        public int getX() {
+            return x;
+        }
+
+        public void setX(int x) {
+            this.x = x;
+        }
+
+        public int getY() {
+            return y;
+        }
+
+        public void setY(int y) {
+            this.y = y;
+        }
+
+        public int getV() {
+            return v;
+        }
+
+        public void setV(int v) {
+            this.v = v;
         }
 
         @Override
