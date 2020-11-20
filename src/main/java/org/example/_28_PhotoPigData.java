@@ -5,31 +5,32 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class _28_PhotoPigData {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // 一.removeUser方法会报错
         List<UserDsVo> userDsVos = new ArrayList<>();
         Map<Integer, UserDsVo> finalUserDsVoMap = userDsVos.stream()
                 .filter(vo -> !vo.getProjectCode().equals("IDT"))
                 .collect(Collectors.toMap(UserDsVo::getAccount, Function.identity()));
         // 二.
-        //    1.不确定
+        //    1.<=50
         //    2.会，volatile这个关键字只是保证了可见性，并不保证操作的原子性。
         //    3.否，提交给线程池的任务是否执行是由计算来调度的。
         //    4.否，就是2和3的共同结果。
         //    5.否，就是2和3的共同结果。
         //    6.对tryFunction方法加synchronized。
         ExecutorService executorService = Executors.newFixedThreadPool(6);
-//        BlockThread blockThread = new BlockThread();
-//        for (int i = 0; i < 5; i++) {
-//            int finalI = i;
-//            executorService.submit(() -> blockThread.tryFunction(finalI));
-//        }
+        BlockThread blockThread = new BlockThread();
+        for (int i = 0; i < 5; i++) {
+            int finalI = i;
+            executorService.submit(() -> blockThread.tryFunction(finalI));
+        }
         // 三.syncUsers、syncUserDsDto要初始化；dataDsVo.getUserDsVoList().addAll(syncUsers);nullpointexception；SUNC_SER_NUM怎么存的？
         // 四.1.5;2.否，原子性；3.否，提交给线程池的任务是否执行是由计算来调度的；4.否，是，AtomicInteger是原子性操作，底层是通过cas来保证的。
         AtomicInteger atomicInteger = new AtomicInteger(0);
@@ -37,6 +38,7 @@ public class _28_PhotoPigData {
             executorService.submit(new CustomedThread(i, atomicInteger));
         }
         System.out.println(4 >> 4);
+        TimeUnit.SECONDS.sleep(5000);
     }
 
     static class CustomedThread implements Runnable {

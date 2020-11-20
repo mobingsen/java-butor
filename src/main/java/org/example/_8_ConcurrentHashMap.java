@@ -18,7 +18,7 @@ public class _8_ConcurrentHashMap {
         Map<Node, Integer> map = new ConcurrentHashMap<>(16);
         for (int i = 0; i < 10; i++) {
             // 数组+链表|红黑树    当元素插入数组时是用cas操作的，操作链表时是synchronized代码块的，
-            map.put(new Node(1), i);
+            map.put(new Node(i), i);
         }
         System.out.println(map.toString());
     }
@@ -40,7 +40,7 @@ public class _8_ConcurrentHashMap {
 
         @Override
         public int hashCode() {
-            return i % 9;
+            return i % 3;
         }
 
         @Override
