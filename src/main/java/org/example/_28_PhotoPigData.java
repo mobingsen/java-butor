@@ -42,9 +42,9 @@ public class _28_PhotoPigData {
     }
 
     static class CustomedThread implements Runnable {
-        private Integer blockObj;
-        private int tag;
-        private AtomicInteger count;
+        private final Integer blockObj;
+        private final int tag;
+        private final AtomicInteger count;
 
         public CustomedThread(int tag, AtomicInteger count) {
             this.blockObj = tag >> 4;
