@@ -83,4 +83,37 @@ public class  _1456_MaxVowels {
         }
         return max;
     }
+
+    /**
+     * 使用双指针维护长度为k的窗口
+     * https://leetcode-cn.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/solution/javashuang-zhi-zhen-by-alex-3b/
+     * @param s
+     * @param k
+     * @return
+     */
+    public int maxVowels1(String s, int k) {
+        int n = s.length();
+        int count = 0, result = 0;
+        int i = 0;
+
+        for (int j = 0; j < n; j++) {
+            if ("aeiou".indexOf(String.valueOf(s.charAt(j))) != -1) count++;
+            if (j > k - 1) {
+                if ("aeiou".indexOf(String.valueOf(s.charAt(i))) != -1) count--;
+                i++;
+            }
+            result = Math.max(result, count);
+        }
+
+        return result;
+    }
+
+    /**
+     * 别人都这么牛逼，你还有什么不努力？哎...心都碎了一地了...
+     *
+     * 总结：
+     * 1.分析问题，找到问题的关键所在。
+     * 2.理清思路再写代码，要多优化代码。
+     * 3.善于总结和反思自身的不足。
+     */
 }
