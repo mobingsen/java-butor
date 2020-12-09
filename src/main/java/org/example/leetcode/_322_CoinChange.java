@@ -1,5 +1,9 @@
 package org.example.leetcode;
 
+/**
+ * https://leetcode-cn.com/problems/coin-change/
+ * 分析问题，找到规律，代码实现
+ */
 public class _322_CoinChange {
 
     public static void main(String[] args) {
