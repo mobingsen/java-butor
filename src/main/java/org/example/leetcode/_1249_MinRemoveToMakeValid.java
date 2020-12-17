@@ -3,6 +3,7 @@ package org.example.leetcode;
 import java.util.Stack;
 
 /**
+ * https://leetcode-cn.com/problems/minimum-remove-to-make-valid-parentheses/
  * Created by mbs on 2020/12/14 17:00
  */
 public class _1249_MinRemoveToMakeValid {

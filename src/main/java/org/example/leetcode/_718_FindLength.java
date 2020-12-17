@@ -1,13 +1,14 @@
 package org.example.leetcode;
 
 /**
+ * https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/
  * Created by mbs on 2020/12/14 18:27
  */
 public class _718_FindLength {
 
     public static void main(String[] args) {
         final _718_FindLength o = new _718_FindLength();
-        System.out.println(o.findLength(new int[]{1,2,3,2,1}, new int[]{3,2,1,4,7}));
+        System.out.println(o.findLength(new int[]{1, 2, 3, 2, 1}, new int[]{3, 2, 1, 4, 7}));
     }
 
     public int findLength(int[] A, int[] B) {
