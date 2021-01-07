@@ -3,7 +3,9 @@ package org.example.leetcode;
 import org.example.utils.Assert;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * https://leetcode-cn.com/problems/replace-words/
@@ -31,6 +33,15 @@ public class _648_ReplaceWords {
     }
 
     public String replaceWords(List<String> dictionary, String sentence) {
-        return null;
+        return Arrays.stream(sentence.split(" "))
+                .map(word -> doWord(word, dictionary))
+                .collect(Collectors.joining(" "));
+    }
+
+    private String doWord(String word, List<String> dictionary) {
+        return dictionary.stream()
+                .filter(word::startsWith)
+                .min(Comparator.comparingInt(String::length))
+                .orElse(word);
     }
 }
