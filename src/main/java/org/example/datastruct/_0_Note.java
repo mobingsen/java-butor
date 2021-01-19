@@ -24,7 +24,7 @@ package org.example.datastruct;
  * 散列表(Hash)
  * 散列表源自于散列函数(Hash function)，其思想是如果在结构中存在关键字和T相等的记录，那么必定在F(T)的存储位置可以找到该记录，这样就可以
  * 不用进行比较操作而直接取得所查记录。
- * Created by 小墨 on 2020/11/8 15:20
+ * Created by mobingsen on 2020/11/8 15:20
  */
 public class _0_Note {
 }

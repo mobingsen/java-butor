@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * http://hg.openjdk.java.net/jdk8u/jdk8u/jdk/file/tip/src/share/classes/java/lang/invoke/InnerClassLambdaMetafactory.java
- * Created by 小墨 on 2020/9/4 16:45
+ * Created by mobingsen on 2020/9/4 16:45
  */
 public class _1_LambdaOpenJDK {
 

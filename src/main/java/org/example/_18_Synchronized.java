@@ -120,7 +120,7 @@ import java.util.concurrent.CountDownLatch;
  * 锁会降级吗？
  * Biased lock revocation，当 JVM 进入安全点 SafePoint的时候，会检查是否有闲置的 Monitor，然后试图进行降级。
  * 参考地址：http://blog.ragozin.info/2012/10/safepoints-in-hotspot-jvm.html
- * Created by 小墨 on 2020/10/29 20:07
+ * Created by mobingsen on 2020/10/29 20:07
  */
 public class _18_Synchronized {
 

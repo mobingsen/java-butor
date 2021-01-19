@@ -10,7 +10,7 @@ import java.util.List;
  * 在没有指定其容量进行new时，其elementData大小就是0即是空数组，
  * 在添加第一个元素时会触发扩容，其容量将变为10，即是数组内定的最小容量。
  * 往后再次扩容时，int newCapacity = oldCapacity + (oldCapacity >> 1);从这行代码看出容量变为了原来的1.5倍。
- * Created by 小墨 on 2020/9/9 20:06
+ * Created by mobingsen on 2020/9/9 20:06
  */
 public class _3_ArrayList {
 

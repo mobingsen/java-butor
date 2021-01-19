@@ -23,7 +23,7 @@ import java.util.stream.IntStream;
  *
  * reactor实现还有jdk的Rxjava，web的webflux，netty
  * Rxjava
- * Created by 小墨 on 2020/11/1 12:04
+ * Created by mobingsen on 2020/11/1 12:04
  */
 public class _1_FluxAndMono {
 

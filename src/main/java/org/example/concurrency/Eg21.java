@@ -17,7 +17,7 @@ import java.util.stream.IntStream;
  * 是可重入锁，表示线程可以多次调用lock方法，导致每调用一次，state值都会加一。
  *
  * 对于ReentrantLock来说，所谓的上锁，本质上就是对aqs中的state成员变量的操作：对该成员变量+1，表示上锁；对该成员变量-1，表示释放锁。
- * Created by 小墨 on 2020/7/10 16:16
+ * Created by mobingsen on 2020/7/10 16:16
  */
 public class Eg21 {
 

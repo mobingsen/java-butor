@@ -14,7 +14,7 @@ import java.util.concurrent.CyclicBarrier;
  * 5.如果计数器没有归零，那么当前的调用线程将会通过Condition的await方法，在屏障前进行等待。
  * 6.以上所有执行流程均在lock锁的控制范围内，不会出现并发情况。
  *
- * Created by 小墨 on 2020/7/9 16:47
+ * Created by mobingsen on 2020/7/9 16:47
  */
 public class Eg15 {
 

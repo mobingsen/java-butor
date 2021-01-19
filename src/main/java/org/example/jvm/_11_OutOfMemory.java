@@ -18,7 +18,7 @@ import java.util.Map;
  *
  * -XX:+HeapDumpOnOutOfMemoryError
  * -XX:HeapDumpPath=/opt/jvmdump
- * Created by 小墨 on 2020/9/28 9:40
+ * Created by mobingsen on 2020/9/28 9:40
  */
 public class _11_OutOfMemory {
 

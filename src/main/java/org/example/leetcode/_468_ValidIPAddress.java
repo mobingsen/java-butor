@@ -5,7 +5,7 @@ import java.util.function.Function;
 
 /**
  * https://leetcode-cn.com/problems/validate-ip-address/
- * Created by modou on 2021/1/12 22:09
+ * Created by mobingsen on 2021/1/12 22:09
  */
 public class _468_ValidIPAddress {
 

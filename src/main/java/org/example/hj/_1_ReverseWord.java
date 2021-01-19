@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 /**
- * Created by 小墨 on 2020/10/17 16:07
+ * Created by mobingsen on 2020/10/17 16:07
  */
 public class _1_ReverseWord {
 
