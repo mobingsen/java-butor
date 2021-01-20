@@ -58,7 +58,7 @@ package org.example.jvm;
  * 后的执行过程中直接使用方法表进行动态绑定。
  *
  * 消除方法内联影响的命令：java -XX:CompileCommand="dontinline, *.*" 类名
- * Created by 小墨 on 2020/7/21 10:10
+ * Created by mobingsen on 2020/7/21 10:10
  */
 public class _3_MethodInvoke {
 }

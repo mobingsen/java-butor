@@ -15,7 +15,7 @@ import java.util.stream.IntStream;
  *
  * Thread.sleep与await（或是object的wait方法）的本质区别：sleep方法本质上不会释放锁，而await会释放锁，并且在signal后，还需要重新获得
  * 锁才能继续执行（该行为与object的wait方法完全一致）
- * Created by 小墨 on 2020/7/7 16:00
+ * Created by mobingsen on 2020/7/7 16:00
  */
 public class Eg11 {
 

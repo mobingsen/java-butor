@@ -24,7 +24,7 @@ package org.example.jvm;
  * 除 long 和 double 外，其他基本类型与引用类型在解释执行的方法栈帧中占用的大小是一致的，但它们在堆中占用的大小确不同。在将 boolean、
  * byte、char 以及 short 的值存入字段或者数组单元时，Java 虚拟机会进行掩码操作。在读取时，Java 虚拟机则会将其扩展为 int 类型。
  * https://adopt-openjdk.ci.cloudbees.com/view/OpenJDK/job/asmtools/lastSuccessfulBuild/artifact/asmtools-6.0.tar.gz
- * Created by 小墨 on 2020/7/20 16:49
+ * Created by mobingsen on 2020/7/20 16:49
  */
 public class _1_BasicType {
 }

@@ -50,7 +50,7 @@ package org.example.jvm;
  * 使用 Field.get/set(Object) 来访问字段的值。
  * 使用 Method.invoke(Object, Object[]) 来调用方法。
  *
- * Created by 小墨 on 2020/7/21 16:14
+ * Created by mobingsen on 2020/7/21 16:14
  */
 public class _6_Reflect {
 }

@@ -5,7 +5,7 @@ package org.example.algorithms;
  *
  * 基本思想：每步将一个待排序的记录，按其顺序码大小插入到前面已经排序的字序列的合适位置（从后向前找到合适位置后），直到全部插入排序完为止。
  *
- * Created by 小墨 on 2020/7/2 11:25
+ * Created by mobingsen on 2020/7/2 11:25
  */
 public class DirectInsertSort {
 

@@ -9,7 +9,7 @@ package org.example.solutions;
  *
  * 参考地址：https://mp.weixin.qq.com/s/-yyMpwjIEL9jySMzYNs2ew
  *
- * Created by 小墨 on 2020/9/28 10:05
+ * Created by mobingsen on 2020/9/28 10:05
  */
 public class _1_GeneratorId {
 }

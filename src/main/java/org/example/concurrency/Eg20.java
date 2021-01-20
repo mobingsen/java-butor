@@ -11,7 +11,7 @@ package org.example.concurrency;
  * 3.弱引用（weak）
  * 4.虚引用（phantom）
  *
- * Created by 小墨 on 2020/7/10 11:35
+ * Created by mobingsen on 2020/7/10 11:35
  */
 public class Eg20 {
 

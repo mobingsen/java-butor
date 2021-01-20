@@ -47,7 +47,7 @@ package org.example.jvm;
  *
  * 即将到来的 Java 11 引入了 ZGC，宣称暂停时间不超过 10ms。
  *
- * Created by 小墨 on 2020/8/5 19:45
+ * Created by mobingsen on 2020/8/5 19:45
  */
 public class _9_Gc {
 }

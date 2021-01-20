@@ -18,7 +18,7 @@ package org.example.concurrency;
  *          7: putfield      #2                  // Field count:I
  *
  *
- * Created by 小墨 on 2020/7/9 20:02
+ * Created by mobingsen on 2020/7/9 20:02
  */
 public class Eg16 {
 

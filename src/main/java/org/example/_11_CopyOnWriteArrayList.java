@@ -4,7 +4,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * CopyOnWriteArrayList通过ReentrantLock实现的
- * Created by 小墨 on 2020/9/18 12:01
+ * Created by mobingsen on 2020/9/18 12:01
  */
 public class _11_CopyOnWriteArrayList {
 

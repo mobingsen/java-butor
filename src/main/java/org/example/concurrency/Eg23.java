@@ -17,7 +17,7 @@ import java.util.stream.IntStream;
  *      DiscardOldestPolicy：丢弃掉阻塞队列中存放时间最久的任务（队头元素），并且为当前所提交的任务留出一个队列中的空闲空间，以便将其放
  *                           进到队列中
  *      CallerRunsPolicy：直接由提交任务的线程来运行这个提交的任务
- * Created by 小墨 on 2020/7/13 17:02
+ * Created by mobingsen on 2020/7/13 17:02
  */
 public class Eg23 {
 

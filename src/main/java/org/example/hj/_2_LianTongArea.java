@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
  * 0 0 0 1 1 1 1 1 0 0
  * 10*10,某个点的上下左右是1即可连通，对角线连通不算。
  * 5， 7， 8 => 最终结果输出 8
- * Created by 小墨 on 2020/10/18 13:11
+ * Created by mobingsen on 2020/10/18 13:11
  */
 public class _2_LianTongArea {
 

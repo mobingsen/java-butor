@@ -1,7 +1,7 @@
 package org.example.concurrency;
 
 /**
- * Created by 小墨 on 2020/6/29 9:51
+ * Created by mobingsen on 2020/6/29 9:51
  */
 public class Eg4 {
 

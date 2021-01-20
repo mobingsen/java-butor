@@ -89,7 +89,7 @@ package org.example.concurrency;
  *  重量级锁：
  *  线程最终从用户态进入到了内核态。
  *
- * Created by 小墨 on 2020/6/30 19:36
+ * Created by mobingsen on 2020/6/30 19:36
  */
 public class Eg5 {
 

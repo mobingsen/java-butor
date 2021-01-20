@@ -4,7 +4,7 @@ package org.example.algorithms;
  * 希尔排序
  * 基本思想：先取一个小于n的整数d1作为第一个增量，把文件的全部记录分成d1个组。所有距离为d1的倍数的记录放在同一个组中。先在各组内进行直接
  * 插入排序；然后，取第二个增量d2
- * Created by 小墨 on 2020/7/2 15:24
+ * Created by mobingsen on 2020/7/2 15:24
  */
 public class ShellSort {
 
