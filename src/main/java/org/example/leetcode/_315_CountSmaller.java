@@ -9,18 +9,17 @@ import java.util.List;
  */
 public class _315_CountSmaller {
 
-    public static void main(String[] args) {
-        _315_CountSmaller smaller = new _315_CountSmaller();
-        System.out.println(smaller.countSmaller(new int[]{5, 2, 6, 1})); // 2,1,1,0
-    }
-
     private Integer[] c;
+
     public List<Integer> countSmaller(int[] nums) {
+        // 去重从小到大排序
         int[] array = Arrays.stream(nums)
                 .distinct()
                 .sorted()
                 .toArray();
+        // 计算数组
         c = new Integer[nums.length];
+        // 统计结果
         Integer[] result = new Integer[nums.length];
         for (int i = nums.length - 1; i >= 0; i--) {
             int pos = Arrays.binarySearch(array, nums[i]);
@@ -34,7 +33,8 @@ public class _315_CountSmaller {
         int ret = 0;
         while (pos > 0) {
             ret += (c[pos] == null ? 0 : c[pos]);
-            pos -= (pos & (-pos));
+            // https://www.cnblogs.com/xenny/p/9739600.html
+            pos -= pos & (pos - 1);
         }
         return ret;
     }
@@ -42,7 +42,7 @@ public class _315_CountSmaller {
     private void update(int pos) {
         while (pos < c.length) {
             c[pos] = (c[pos] == null ? 0 : c[pos]) + 1;
-            pos += (pos & (-pos));
+            pos += pos & (pos - 1);
         }
     }
 }
