@@ -16,7 +16,7 @@ public class _1_LRU<K, V> {
             private static final long serialVersionUID = 1;
 
             @Override
-            protected boolean removeEldestEntry(Map.Entry eldest) {
+            protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
                 return size() > _1_LRU.this.cacheSize;
             }
         };
