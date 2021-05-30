@@ -25,7 +25,7 @@ public class _42_ExecutorShutdown {
             });
         }
         while (executorService.isTerminated()) {
-            executorService.awaitTermination(60, TimeUnit.SECONDS)
+            executorService.awaitTermination(60, TimeUnit.SECONDS);
             TimeUnit.SECONDS.sleep(1);
         }
     }
