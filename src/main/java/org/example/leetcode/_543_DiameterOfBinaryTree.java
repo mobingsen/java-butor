@@ -16,7 +16,7 @@ package org.example.leetcode;
  *     }
  * }
  */
-public class _543_Solution {
+public class _543_DiameterOfBinaryTree {
 
     private int m = 1;
 
@@ -37,21 +37,9 @@ public class _543_Solution {
 
     public static void main(String[] args) {
         final TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
-        final _543_Solution solution = new _543_Solution();
+        final _543_DiameterOfBinaryTree solution = new _543_DiameterOfBinaryTree();
         final int i = solution.diameterOfBinaryTree(root);
         System.out.println(i);
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}

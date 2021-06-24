@@ -62,20 +62,3 @@ public class _208_Trie {
     }
 }
 
-class Node {
-    private final Map<Integer, Node> map = new HashMap<>(26);
-    private boolean end;
-    public Node() {}
-    public Node getOrNull(char ch) {
-        return map.get(ch - 'a');
-    }
-    public Node computeIfAbsent(char ch) {
-        return map.computeIfAbsent(ch - 'a', v -> new Node());
-    }
-    public void setEnd() {
-        end = true;
-    }
-    public boolean isEnd() {
-        return end;
-    }
-}
