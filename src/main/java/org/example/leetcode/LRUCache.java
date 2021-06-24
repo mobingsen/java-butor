@@ -6,11 +6,11 @@ import java.util.Map;
 /**
  * https://leetcode-cn.com/problems/lru-cache/
  */
-class _146_LRUCache {
+class LRUCache {
 
     private final Map<Integer, Integer> cache;
 
-    public _146_LRUCache(int capacity) {
+    public LRUCache(int capacity) {
         cache = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
             @Override
             protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
