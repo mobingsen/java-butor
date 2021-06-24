@@ -21,7 +21,14 @@ public class _9_ThreadPoolExecutor {
                 new ThreadPoolExecutor.AbortPolicy());
         for (int i = 0; i < 20; i++) {
             final int id = i;
-            executor.submit(() -> System.out.println(id));
+            executor.submit(() -> {
+                // 这样的业务逻辑要做异常捕获，否则业务异常会导致当前线程退出线程池，引起线程的创建和销毁开销。
+                try {
+                    System.out.println(id);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
         }
         executor.awaitTermination(1000L, TimeUnit.SECONDS);
     }
