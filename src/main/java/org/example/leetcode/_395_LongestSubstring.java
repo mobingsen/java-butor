@@ -49,7 +49,7 @@ public class _395_LongestSubstring {
             return n;
         }
         Set<String> cutting = Arrays.stream(s.split(""))
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.summingInt(v -> 1)))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet().stream()
                 .filter(e -> e.getValue() < k)
                 .map(Map.Entry::getKey)
