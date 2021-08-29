@@ -25,4 +25,5 @@ dependencies {
 	compile 'io.projectreactor:reactor-core:3.4.0'
     testCompile 'io.projectreactor:reactor-test:3.4.0'
     compile 'com.google.guava:guava:29.0-jre'
+    compile 'com.alibaba:fastjson:1.2.76'
 }
