@@ -3,7 +3,7 @@ package org.example;
 /**
  * @author mobingsen
  */
-public class StringEqualTest {
+public class _45_StringEqualTest {
 
     public static void main(String[] args) {
         String s1 = "Programming";
