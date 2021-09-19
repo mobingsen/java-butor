@@ -19,7 +19,10 @@ import java.util.stream.StreamSupport;
 public class _17_Stream {
 
     public static void main(String[] args) {
-        List<Integer> list = IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList());
+        List<Integer> list = IntStream
+                // 左右都是闭区间
+                .rangeClosed(1, 100)
+                .boxed().collect(Collectors.toList());
         Iterator<Integer> iterator = list.iterator();
         IntSummaryStatistics statistics = StreamSupport
                 .stream(Spliterators.spliteratorUnknownSize(iterator, Spliterator.ORDERED), false)
@@ -56,6 +59,9 @@ public class _17_Stream {
         final Map<Integer, Data17> map = Stream.of(data1, data2, data3)
                 .collect(Collectors.toMap(Data17::getId, Function.identity(), (d1, d2) -> d1));
         System.out.println(map);
+        List<Data17> asList = Arrays.asList(data1, data2, data3, data3);
+        Map<String, List<Data17>> groupByName = asList.stream().collect(Collectors.groupingBy(Data17::getName));
+        System.out.println(groupByName);
     }
 }
 
