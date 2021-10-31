@@ -51,6 +51,7 @@ public class MergeSort {
             temp[k++] = nums[j++];
         }
         // 把新数组中的数覆盖nums数组
+        // System.arraycopy(temp, 0, nums, low, temp.length);
         for (int k2 = 0; k2 < temp.length; k2++) {
             nums[k2 + low] = temp[k2];
         }
