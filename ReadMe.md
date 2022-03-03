@@ -1,6 +1,6 @@
 # java plus
 
-<!-- plus is yyds, as you known, that is a story! -->
+> **plus is yyds, as you known, that is a story!**
 
 ## 主题
 
