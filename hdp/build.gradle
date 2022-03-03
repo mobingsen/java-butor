@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.plus.hdp'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.5.0'
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.5.0'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+    compile(group: 'org.apache.hadoop', name: 'hadoop-common', version: '2.7.2') {
+        exclude(module: 'slf4j-log4j12')
+    }
+    compile(group: 'org.apache.hadoop', name: 'hadoop-client', version: '2.7.2') {
+        exclude(module: 'slf4j-log4j12')
+    }
+    compile group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: '2.7.2'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.5.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
