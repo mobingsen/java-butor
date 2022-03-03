@@ -1,3 +1,4 @@
 rootProject.name = 'java-plus'
 include 'hdp'
+include 'itext'
 
