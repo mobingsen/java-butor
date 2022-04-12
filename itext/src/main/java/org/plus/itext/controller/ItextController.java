@@ -1,4 +1,4 @@
-package org.plus.itext;
+package org.plus.itext.controller;
 
 import com.lowagie.text.*;
 import com.lowagie.text.Font;
@@ -6,6 +6,7 @@ import com.lowagie.text.pdf.BaseFont;
 import com.lowagie.text.pdf.PdfWriter;
 import com.lowagie.text.rtf.RtfWriter2;
 import lombok.extern.slf4j.Slf4j;
+import org.plus.itext.bo.ExamScore;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

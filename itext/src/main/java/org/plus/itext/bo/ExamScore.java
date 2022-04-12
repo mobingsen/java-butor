@@ -1,4 +1,4 @@
-package org.plus.itext;
+package org.plus.itext.bo;
 
 import lombok.Data;
 
